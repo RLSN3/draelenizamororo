@@ -292,7 +292,7 @@ const CONFIG = {
   instagramUrl: "https://www.instagram.com/draelenizamororo/",
   footerText: "Dra. Eleniza Mororó • Dentista Estética | CRO-CE 15103",
   devName: "Railson Lima",
-  devUrl: "instagram://user?username=railsonnlima",
+  devUrl: "https://www.instagram.com/railsonnlima/",
   tagline: "Clínica Geral e Odontologia Estética",
 
   whatsapp: "5588981347708",                    // número com DDI+DDD, só dígitos
@@ -506,5 +506,5 @@ $('#ovLogo').src=$('#footLogo').src;
 
 updateBar(false);
 </script>
-<script data-instagram-app-handler>(function(){document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a[data-instagram-app]"):null;if(!a||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();var u=a.getAttribute("data-instagram-app")||"railsonnlima",ua=navigator.userAgent||"",android=/Android/i.test(ua);if(android){location.href="intent://instagram.com/_u/"+encodeURIComponent(u)+"/#Intent;package=com.instagram.android;scheme=https;end";return}location.href="instagram://user?username="+encodeURIComponent(u)},true)})();</script></body>
+<script data-instagram-app-handler>(function(){document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a[data-instagram-app]"):null;if(!a||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();var u=a.getAttribute("data-instagram-app")||"railsonnlima",ua=navigator.userAgent||"",android=/Android/i.test(ua),ios=/iPhone|iPad|iPod/i.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);if(android){location.href="intent://instagram.com/_u/"+encodeURIComponent(u)+"/#Intent;package=com.instagram.android;scheme=https;end";return}if(ios){location.href="instagram://user?username="+encodeURIComponent(u);return}location.href="https://www.instagram.com/"+encodeURIComponent(u)+"/"},true)})();</script></body>
 </html>
