@@ -390,81 +390,82 @@ footer a.ig:hover{background:var(--ink);color:var(--taupe-soft);transform:transl
 .mono.lit::before{transform:translate(-8px,-8px)}.mono.lit::after{transform:translate(8px,8px)}
 }
 
-/* MODO ESCURO — identidade Dra. Eleniza Mororó */
+/* MODO ESCURO — cinza neutro inspirado na paleta enviada */
 html[data-theme="dark"]{
   color-scheme:dark;
   --taupe:#bd9b8f;
-  --taupe-deep:#e4c8bd;
+  --taupe-deep:#eee5e1;
   --taupe-soft:#d8c2b9;
-  --blush:#302724;
-  --mist:#1c1918;
-  --grey:#aaa19d;
-  --ink:#f5efec;
-  --ink-2:#d2c5bf;
+  --blush:#858585;
+  --mist:#999999;
+  --grey:#d0d0d0;
+  --ink:#fff;
+  --ink-2:#f0f0f0;
 }
-html[data-theme="dark"] body{background:#1c1918;color:#f5efec}
-html[data-theme="dark"] :focus-visible{outline-color:#eadbd7}
+html[data-theme="dark"] body{background:#999999;color:#fff}
+html[data-theme="dark"] :focus-visible{outline-color:#fff}
 html[data-theme="dark"] header.scrolled{
-  background:rgba(28,25,24,.9);
-  box-shadow:0 1px 0 rgba(234,219,215,.12),0 10px 30px -18px rgba(0,0,0,.65)
+  background:rgba(145,145,145,.94);
+  box-shadow:0 1px 0 rgba(255,255,255,.22),0 8px 24px -18px rgba(0,0,0,.22)
 }
-html[data-theme="dark"] .hero{background:#302724}
+html[data-theme="dark"] nav{color:#fff}
+html[data-theme="dark"] .hero{background:#929292}
 html[data-theme="dark"] .hero .bg::after{
-  background:linear-gradient(90deg,rgba(28,25,24,.97) 0,rgba(28,25,24,.91) 34%,rgba(48,39,36,.72) 56%,rgba(48,39,36,.2) 78%,rgba(48,39,36,.08) 100%),linear-gradient(180deg,rgba(28,25,24,.55) 0,rgba(28,25,24,0) 22%)
+  background:linear-gradient(90deg,rgba(125,125,125,.88) 0,rgba(135,135,135,.78) 34%,rgba(150,150,150,.52) 56%,rgba(153,153,153,.16) 78%,rgba(153,153,153,.04) 100%),linear-gradient(180deg,rgba(120,120,120,.25) 0,rgba(120,120,120,0) 22%)
 }
-html[data-theme="dark"] .hero h1 b{color:#e4c8bd}
-html[data-theme="dark"] .obj{background:#352a26;color:#f5efec}
-html[data-theme="dark"] .obj .side p{color:#e4d9d4}
-html[data-theme="dark"] .acc{border-color:rgba(234,219,215,.25)}
-html[data-theme="dark"] .acc .q{border-color:rgba(234,219,215,.25)}
+html[data-theme="dark"] .hero h1 b{color:#fff}
+html[data-theme="dark"] .obj{background:#858585;color:#fff}
+html[data-theme="dark"] .obj .side p{color:#f4f4f4}
+html[data-theme="dark"] .acc{border-color:rgba(255,255,255,.34)}
+html[data-theme="dark"] .acc .q{border-color:rgba(255,255,255,.28);color:#fff}
 html[data-theme="dark"] .acc .q::before{background:#bd9b8f}
 html[data-theme="dark"] .acc .q.open,
-html[data-theme="dark"] .acc .q:hover{background:linear-gradient(90deg,rgba(189,155,143,.16),rgba(189,155,143,.025))}
+html[data-theme="dark"] .acc .q:hover{background:linear-gradient(90deg,rgba(255,255,255,.17),rgba(255,255,255,.04))}
 html[data-theme="dark"] .acc .pm{background:#bd9b8f}
 html[data-theme="dark"] .acc .pm::before,
-html[data-theme="dark"] .acc .pm::after{background:#2e2220}
-html[data-theme="dark"] .acc .q.open .pm{background:#eadbd7}
+html[data-theme="dark"] .acc .pm::after{background:#302724}
+html[data-theme="dark"] .acc .q.open .pm{background:#fff}
 html[data-theme="dark"] .acc .q.open .pm::before,
-html[data-theme="dark"] .acc .q.open .pm::after{background:#2e2220}
-html[data-theme="dark"] .acc button:focus-visible{outline-color:#eadbd7}
-html[data-theme="dark"] .trust ul{background:#282220;box-shadow:0 30px 60px -30px rgba(0,0,0,.75),0 0 0 1px rgba(189,155,143,.2)}
-html[data-theme="dark"] .trust li+li{border-left-color:rgba(234,219,215,.16)}
-html[data-theme="dark"] .ico{background:#3a2e29;color:#eadbd7}
-html[data-theme="dark"] .trust li:hover .ico{background:#bd9b8f;color:#2e2220}
-html[data-theme="dark"] .mono::before{background:#302724}
-html[data-theme="dark"] .sign{background:#302724;color:#f5efec}
+html[data-theme="dark"] .acc .q.open .pm::after{background:#302724}
+html[data-theme="dark"] .acc button:focus-visible{outline-color:#fff}
+html[data-theme="dark"] .trust ul{background:#858585;box-shadow:0 18px 40px -28px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.2)}
+html[data-theme="dark"] .trust li+li{border-left-color:rgba(255,255,255,.2)}
+html[data-theme="dark"] .ico{background:#777;color:#fff}
+html[data-theme="dark"] .trust li:hover .ico{background:#bd9b8f;color:#302724}
+html[data-theme="dark"] .mono::before{background:#858585}
+html[data-theme="dark"] .sign{background:#858585;color:#fff}
 html[data-theme="dark"] .sign i{background:#bd9b8f}
-html[data-theme="dark"] .sign i svg{stroke:#2e2220}
-html[data-theme="dark"] .btn{--bg:#bd9b8f;--fg:#2e2220;box-shadow:0 14px 30px -14px rgba(0,0,0,.65)}
+html[data-theme="dark"] .sign i svg{stroke:#302724}
+html[data-theme="dark"] .btn{--bg:#bd9b8f;--fg:#302724;box-shadow:0 10px 24px -14px rgba(0,0,0,.28)}
 html[data-theme="dark"] .btn::before{background:#eadbd7}
-html[data-theme="dark"] .btn:hover{color:#2e2220}
-html[data-theme="dark"] .btn.dark{--bg:#eadbd7;--fg:#2e2220}
-html[data-theme="dark"] .btn.dark::before{background:#bd9b8f}
-html[data-theme="dark"] .pz{background:rgba(28,25,24,.88);color:#eadbd7;box-shadow:0 0 0 1px rgba(189,155,143,.4)}
-html[data-theme="dark"] .pz:hover{background:#302724}
-html[data-theme="dark"] .dots{background:rgba(28,25,24,.82)}
-html[data-theme="dark"] .dots button[aria-current=true]::before{background:#eadbd7}
+html[data-theme="dark"] .btn:hover{color:#302724}
+html[data-theme="dark"] .btn.dark{--bg:#302724;--fg:#fff}
+html[data-theme="dark"] .btn.dark::before{background:#51413b}
+html[data-theme="dark"] .pz{background:rgba(115,115,115,.92);color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.28)}
+html[data-theme="dark"] .pz:hover{background:#777}
+html[data-theme="dark"] .dots{background:rgba(115,115,115,.9)}
+html[data-theme="dark"] .dots button[aria-current=true]::before{background:#fff}
 html[data-theme="dark"] .loc .card{
-  background:transparent!important;color:#f5efec;border:0;box-shadow:none
+  background:transparent!important;color:#fff;border:0;box-shadow:none
 }
-html[data-theme="dark"] .loc .card .logo{--la:#302724;--lb:#302724}
-html[data-theme="dark"] .srv li{background:#282220;color:#f5efec;border-color:rgba(189,155,143,.22)}
+html[data-theme="dark"] .loc .card .logo{--la:#302724;--lb:#fff}
+html[data-theme="dark"] .srv li{background:#858585;color:#fff;border-color:rgba(255,255,255,.22)}
 html[data-theme="dark"] .srv li p,
-html[data-theme="dark"] .loc .card p{color:#d2c5bf}
-html[data-theme="dark"] .loc .card p{border-top-color:rgba(234,219,215,.24)}
-html[data-theme="dark"] .srv li .ico{background:#3a2e29;color:#eadbd7}
-html[data-theme="dark"] .srv li .go{color:#eadbd7}
-html[data-theme="dark"] footer{background:#151211;color:#e8ded9}
-html[data-theme="dark"] footer a{color:#eadbd7}
-html[data-theme="dark"] .splash{background:#1c1918;color:#f5efec}
-html[data-theme="dark"] .sp-x{background:#302724;color:#eadbd7}
+html[data-theme="dark"] .loc .card p{color:#f4f4f4}
+html[data-theme="dark"] .loc .card p{border-top-color:rgba(255,255,255,.3)}
+html[data-theme="dark"] .srv li .ico{background:#777;color:#fff}
+html[data-theme="dark"] .srv li .go{color:#fff}
+html[data-theme="dark"] footer{background:#777;color:#f4f4f4}
+html[data-theme="dark"] footer a{color:#fff}
+html[data-theme="dark"] .splash{background:#999;color:#fff}
+html[data-theme="dark"] .sp-x{background:#858585;color:#fff}
 html[data-theme="dark"] .theme-toggle{
-  border:1px solid rgba(189,155,143,.55);border-radius:999px;
-  background:transparent;color:var(--ink);font:500 .9rem 'SN Pro',system-ui,sans-serif;
+  border:1px solid rgba(255,255,255,.42);border-radius:999px;
+  background:rgba(125,125,125,.94);color:#fff;font:500 .9rem 'SN Pro',system-ui,sans-serif;
   padding:.58rem .9rem;display:inline-flex;align-items:center;gap:.45rem;
   cursor:pointer;white-space:nowrap;transition:background .25s,border-color .25s,color .25s
 }
-html[data-theme="dark"] .theme-toggle:hover{background:rgba(189,155,143,.16);border-color:#bd9b8f}
+html[data-theme="dark"] .theme-toggle:hover{background:#777;border-color:#fff}
 .theme-toggle{
   position:fixed;right:max(1rem,env(safe-area-inset-right,0px));
   bottom:max(1rem,env(safe-area-inset-bottom,0px));z-index:40;
@@ -477,16 +478,15 @@ html[data-theme="dark"] .theme-toggle:hover{background:rgba(189,155,143,.16);bor
 .theme-toggle:hover{background:#eadbd7;border-color:#bd9b8f;transform:translateY(-2px)}
 .theme-toggle svg{width:1.05rem;height:1.05rem;flex:none}
 html[data-theme="dark"] .theme-toggle{
-  background:rgba(48,39,36,.96);color:#f5efec;border-color:rgba(189,155,143,.65)
+  background:rgba(125,125,125,.97);color:#fff;border-color:rgba(255,255,255,.5)
 }
-html[data-theme="dark"] .theme-toggle:hover{background:#40332e;border-color:#bd9b8f}
+html[data-theme="dark"] .theme-toggle:hover{background:#777;border-color:#fff}
 @media(max-width:620px){
   .theme-toggle{right:max(.8rem,env(safe-area-inset-right,0px));bottom:max(.8rem,env(safe-area-inset-bottom,0px));padding:.75rem .95rem;font-size:.85rem}
 }
 @media(prefers-reduced-motion:reduce){
   .theme-toggle{transition:none}
 }
-
 </style>
 </head>
 <body>
