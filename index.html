@@ -42,6 +42,8 @@
   --grey:#999999;         /* filetes e detalhes (nunca texto pequeno) */
   --ink:#2e2220;          /* texto e seções escuras */
   --ink-2:#4f3f39;
+  --la:#302724;
+  --lb:#302724;
   --ease:cubic-bezier(.2,.7,.2,1);
   --r:28px;
 }
@@ -247,9 +249,11 @@ h2{font-weight:600;font-size:clamp(1.95rem,4vw,3.05rem);line-height:1.1;letter-s
 .card .logo{width:100%}
 .card .logo{--la:#302724;--lb:#302724}
 .card p{margin-top:1.4rem;padding-top:1.3rem;border-top:1px solid rgba(46,34,32,.35);color:var(--ink);font-size:1.02rem}
-.card .btn{--bg:var(--ink);--fg:var(--mist);width:100%;justify-content:center;margin-top:1.6rem;box-shadow:0 14px 30px -14px rgba(46,34,32,.6)}
-.card .btn::before{background:var(--mist)}
-.card .btn:hover{color:var(--ink)}
+.card .btn{--bg:#302724;--fg:#fffaf7;width:100%;justify-content:center;margin-top:1.6rem;border:1px solid #302724;box-shadow:0 14px 30px -12px rgba(46,34,32,.5)}
+.card .btn::before{background:#6b4e43}
+.card .btn:hover{color:#fffaf7}
+.card .btn .wa{background:currentColor}
+
 
 footer{background:var(--blush);color:var(--ink-2);padding:2.6rem 0 calc(2.6rem + env(safe-area-inset-bottom,0px));font-size:.86rem;line-height:1.7}
 footer .wrap{display:flex;flex-direction:column;align-items:center;gap:1.1rem;text-align:center}
