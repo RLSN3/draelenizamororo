@@ -385,6 +385,94 @@ footer a.ig:hover{background:var(--ink);color:var(--taupe-soft);transform:transl
 .srv li.lit .go .w{transform:scale(1.08);background:#25d366;color:var(--ink);box-shadow:0 0 0 4px var(--mist)}
 .mono.lit::before{transform:translate(-8px,-8px)}.mono.lit::after{transform:translate(8px,8px)}
 }
+
+/* MODO ESCURO — identidade Dra. Eleniza Mororó */
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --taupe:#bd9b8f;
+  --taupe-deep:#e4c8bd;
+  --taupe-soft:#d8c2b9;
+  --blush:#302724;
+  --mist:#1c1918;
+  --grey:#aaa19d;
+  --ink:#f5efec;
+  --ink-2:#d2c5bf;
+}
+html[data-theme="dark"] body{background:#1c1918;color:#f5efec}
+html[data-theme="dark"] :focus-visible{outline-color:#eadbd7}
+html[data-theme="dark"] header.scrolled{
+  background:rgba(28,25,24,.9);
+  box-shadow:0 1px 0 rgba(234,219,215,.12),0 10px 30px -18px rgba(0,0,0,.65)
+}
+html[data-theme="dark"] .hero{background:#302724}
+html[data-theme="dark"] .hero .bg::after{
+  background:linear-gradient(90deg,rgba(28,25,24,.97) 0,rgba(28,25,24,.91) 34%,rgba(48,39,36,.72) 56%,rgba(48,39,36,.2) 78%,rgba(48,39,36,.08) 100%),linear-gradient(180deg,rgba(28,25,24,.55) 0,rgba(28,25,24,0) 22%)
+}
+html[data-theme="dark"] .hero h1 b{color:#e4c8bd}
+html[data-theme="dark"] .obj{background:#352a26;color:#f5efec}
+html[data-theme="dark"] .obj .side p{color:#e4d9d4}
+html[data-theme="dark"] .acc{border-color:rgba(234,219,215,.25)}
+html[data-theme="dark"] .acc .q{border-color:rgba(234,219,215,.25)}
+html[data-theme="dark"] .acc .q::before{background:#bd9b8f}
+html[data-theme="dark"] .acc .q.open,
+html[data-theme="dark"] .acc .q:hover{background:linear-gradient(90deg,rgba(189,155,143,.16),rgba(189,155,143,.025))}
+html[data-theme="dark"] .acc .pm{background:#bd9b8f}
+html[data-theme="dark"] .acc .pm::before,
+html[data-theme="dark"] .acc .pm::after{background:#2e2220}
+html[data-theme="dark"] .acc .q.open .pm{background:#eadbd7}
+html[data-theme="dark"] .acc .q.open .pm::before,
+html[data-theme="dark"] .acc .q.open .pm::after{background:#2e2220}
+html[data-theme="dark"] .acc button:focus-visible{outline-color:#eadbd7}
+html[data-theme="dark"] .trust ul{background:#282220;box-shadow:0 30px 60px -30px rgba(0,0,0,.75),0 0 0 1px rgba(189,155,143,.2)}
+html[data-theme="dark"] .trust li+li{border-left-color:rgba(234,219,215,.16)}
+html[data-theme="dark"] .ico{background:#3a2e29;color:#eadbd7}
+html[data-theme="dark"] .trust li:hover .ico{background:#bd9b8f;color:#2e2220}
+html[data-theme="dark"] .mono::before{background:#302724}
+html[data-theme="dark"] .sign{background:#302724;color:#f5efec}
+html[data-theme="dark"] .sign i{background:#bd9b8f}
+html[data-theme="dark"] .sign i svg{stroke:#2e2220}
+html[data-theme="dark"] .btn{--bg:#bd9b8f;--fg:#2e2220;box-shadow:0 14px 30px -14px rgba(0,0,0,.65)}
+html[data-theme="dark"] .btn::before{background:#eadbd7}
+html[data-theme="dark"] .btn:hover{color:#2e2220}
+html[data-theme="dark"] .btn.dark{--bg:#eadbd7;--fg:#2e2220}
+html[data-theme="dark"] .btn.dark::before{background:#bd9b8f}
+html[data-theme="dark"] .pz{background:rgba(28,25,24,.88);color:#eadbd7;box-shadow:0 0 0 1px rgba(189,155,143,.4)}
+html[data-theme="dark"] .pz:hover{background:#302724}
+html[data-theme="dark"] .dots{background:rgba(28,25,24,.82)}
+html[data-theme="dark"] .dots button[aria-current=true]::before{background:#eadbd7}
+html[data-theme="dark"] .loc .card,
+html[data-theme="dark"] .srv li{background:#282220;color:#f5efec;border-color:rgba(189,155,143,.22)}
+html[data-theme="dark"] .srv li p,
+html[data-theme="dark"] .loc .card p{color:#d2c5bf}
+html[data-theme="dark"] .srv li .ico{background:#3a2e29;color:#eadbd7}
+html[data-theme="dark"] .srv li .go{color:#eadbd7}
+html[data-theme="dark"] footer{background:#151211;color:#e8ded9}
+html[data-theme="dark"] footer a{color:#eadbd7}
+html[data-theme="dark"] .splash{background:#1c1918;color:#f5efec}
+html[data-theme="dark"] .sp-x{background:#302724;color:#eadbd7}
+html[data-theme="dark"] .theme-toggle{
+  border:1px solid rgba(189,155,143,.55);border-radius:999px;
+  background:transparent;color:var(--ink);font:500 .9rem 'SN Pro',system-ui,sans-serif;
+  padding:.58rem .9rem;display:inline-flex;align-items:center;gap:.45rem;
+  cursor:pointer;white-space:nowrap;transition:background .25s,border-color .25s,color .25s
+}
+html[data-theme="dark"] .theme-toggle:hover{background:rgba(189,155,143,.16);border-color:#bd9b8f}
+.theme-toggle{
+  border:1px solid rgba(107,78,67,.35);border-radius:999px;background:rgba(248,249,250,.72);
+  color:#4f3f39;font:500 .9rem 'SN Pro',system-ui,sans-serif;padding:.58rem .9rem;
+  display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;white-space:nowrap;
+  transition:background .25s,border-color .25s,color .25s
+}
+.theme-toggle:hover{background:#eadbd7;border-color:#bd9b8f}
+.theme-toggle svg{width:1rem;height:1rem;flex:none}
+@media(max-width:980px){
+  .theme-toggle{width:100%;justify-content:center;margin-top:.6rem;padding:.8rem 1rem}
+  html[data-theme="dark"] nav{background:#211c1a}
+}
+@media(prefers-reduced-motion:reduce){
+  .theme-toggle{transition:none}
+}
+
 </style>
 </head>
 <body>
@@ -407,6 +495,11 @@ footer a.ig:hover{background:var(--ink);color:var(--taupe-soft);transform:transl
   <a class="lk" href="#tratamentos">Tratamentos</a>
   <a class="lk" href="#local">Onde estamos</a>
 </nav>
+
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/></svg>
+    <span>Modo escuro</span>
+  </button>
 </div></header>
 
 <main>
@@ -679,5 +772,33 @@ footer a.ig:hover{background:var(--ink);color:var(--taupe-soft);transform:transl
 })();
 </script>
 <script>(function(){if(!matchMedia('(hover:none)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('lit',e.isIntersecting)})},{rootMargin:'-40% 0px -40% 0px'});document.querySelectorAll('.srv li,.trust li,.mono').forEach(function(el){io.observe(el)})})()</script>
+
+<script>
+(function(){
+  var root=document.documentElement,button=document.getElementById('themeToggle');
+  if(!button)return;
+  var saved=null;
+  try{saved=localStorage.getItem('eleniza-theme')}catch(e){}
+  function apply(theme){
+    var dark=theme==='dark';
+    root.setAttribute('data-theme',dark?'dark':'light');
+    button.setAttribute('aria-pressed',dark?'true':'false');
+    button.setAttribute('aria-label',dark?'Ativar modo claro':'Ativar modo escuro');
+    button.querySelector('span').textContent=dark?'Modo claro':'Modo escuro';
+    button.querySelector('svg').innerHTML=dark
+      ?'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>'
+      :'<path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/>';
+    var meta=document.querySelector('meta[name="theme-color"]');
+    if(meta)meta.setAttribute('content',dark?'#1c1918':'#f8f9fa');
+  }
+  apply(saved==='dark'?'dark':'light');
+  button.addEventListener('click',function(){
+    var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    apply(next);
+    try{localStorage.setItem('eleniza-theme',next)}catch(e){}
+  });
+})();
+</script>
+
 </body>
 </html>
