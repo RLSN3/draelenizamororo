@@ -458,16 +458,22 @@ html[data-theme="dark"] .theme-toggle{
 }
 html[data-theme="dark"] .theme-toggle:hover{background:rgba(189,155,143,.16);border-color:#bd9b8f}
 .theme-toggle{
-  border:1px solid rgba(107,78,67,.35);border-radius:999px;background:rgba(248,249,250,.72);
-  color:#4f3f39;font:500 .9rem 'SN Pro',system-ui,sans-serif;padding:.58rem .9rem;
-  display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;white-space:nowrap;
-  transition:background .25s,border-color .25s,color .25s
+  position:fixed;right:max(1rem,env(safe-area-inset-right,0px));
+  bottom:max(1rem,env(safe-area-inset-bottom,0px));z-index:40;
+  border:1px solid rgba(107,78,67,.35);border-radius:999px;background:rgba(248,249,250,.94);
+  color:#4f3f39;font:600 .9rem 'SN Pro',system-ui,sans-serif;padding:.78rem 1.05rem;
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;cursor:pointer;white-space:nowrap;
+  box-shadow:0 8px 28px rgba(46,34,32,.2);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);transition:background .25s,border-color .25s,color .25s,transform .25s
 }
-.theme-toggle:hover{background:#eadbd7;border-color:#bd9b8f}
-.theme-toggle svg{width:1rem;height:1rem;flex:none}
-@media(max-width:980px){
-  .theme-toggle{width:100%;justify-content:center;margin-top:.6rem;padding:.8rem 1rem}
-  html[data-theme="dark"] nav{background:#211c1a}
+.theme-toggle:hover{background:#eadbd7;border-color:#bd9b8f;transform:translateY(-2px)}
+.theme-toggle svg{width:1.05rem;height:1.05rem;flex:none}
+html[data-theme="dark"] .theme-toggle{
+  background:rgba(48,39,36,.96);color:#f5efec;border-color:rgba(189,155,143,.65)
+}
+html[data-theme="dark"] .theme-toggle:hover{background:#40332e;border-color:#bd9b8f}
+@media(max-width:620px){
+  .theme-toggle{right:max(.8rem,env(safe-area-inset-right,0px));bottom:max(.8rem,env(safe-area-inset-bottom,0px));padding:.75rem .95rem;font-size:.85rem}
 }
 @media(prefers-reduced-motion:reduce){
   .theme-toggle{transition:none}
@@ -495,12 +501,12 @@ html[data-theme="dark"] .theme-toggle:hover{background:rgba(189,155,143,.16);bor
   <a class="lk" href="#tratamentos">Tratamentos</a>
   <a class="lk" href="#local">Onde estamos</a>
 </nav>
+</div></header>
 
   <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 15.2A8.5 8.5 0 0 1 8.8 3.5 8.5 8.5 0 1 0 20.5 15.2Z"/></svg>
     <span>Modo escuro</span>
   </button>
-</div></header>
 
 <main>
 <div class="hero">
