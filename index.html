@@ -440,10 +440,14 @@ html[data-theme="dark"] .pz{background:rgba(28,25,24,.88);color:#eadbd7;box-shad
 html[data-theme="dark"] .pz:hover{background:#302724}
 html[data-theme="dark"] .dots{background:rgba(28,25,24,.82)}
 html[data-theme="dark"] .dots button[aria-current=true]::before{background:#eadbd7}
-html[data-theme="dark"] .loc .card,
+html[data-theme="dark"] .loc .card{
+  background:transparent!important;color:#f5efec;border:0;box-shadow:none
+}
+html[data-theme="dark"] .loc .card .logo{--la:#bd9b8f;--lb:#f5efec}
 html[data-theme="dark"] .srv li{background:#282220;color:#f5efec;border-color:rgba(189,155,143,.22)}
 html[data-theme="dark"] .srv li p,
 html[data-theme="dark"] .loc .card p{color:#d2c5bf}
+html[data-theme="dark"] .loc .card p{border-top-color:rgba(234,219,215,.24)}
 html[data-theme="dark"] .srv li .ico{background:#3a2e29;color:#eadbd7}
 html[data-theme="dark"] .srv li .go{color:#eadbd7}
 html[data-theme="dark"] footer{background:#151211;color:#e8ded9}
