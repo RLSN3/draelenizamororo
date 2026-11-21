@@ -522,11 +522,13 @@ html[data-theme="dark"] .theme-toggle:hover{background:#777;border-color:#fff}
 .services-option[aria-pressed="true"]{background:#2e2220;color:#fff;border-color:#2e2220}
 .services-unsure{margin:.75rem 0}
 .services-unsure .services-option{width:100%;text-align:center;background:#f3e9e5;border-color:#dfc9c0}
-.services-evaluation-note{display:flex;align-items:flex-start;gap:.7rem;margin:1rem 0 .8rem;padding:.85rem .95rem;border:1px solid #d9c1b7;border-radius:12px;background:#f0e3de;color:#4b3731}
-.services-evaluation-note>span:first-child{font-size:1.1rem;line-height:1.3;color:#76584d}
-.services-evaluation-note strong,.services-evaluation-note small{display:block}
-.services-evaluation-note strong{font-size:.88rem;line-height:1.35}
-.services-evaluation-note small{font-size:.78rem;line-height:1.4;margin-top:.2rem}
+.services-evaluation{margin:1rem 0 .8rem}
+.services-evaluation-button{display:flex;width:100%;align-items:center;gap:.6rem;padding:.8rem .9rem;border:1px solid #d9c1b7;border-radius:11px;background:#f0e3de;color:#4b3731;text-align:left;font:600 .85rem/1.35 'SN Pro',system-ui,sans-serif;cursor:pointer}
+.services-evaluation-button>span:first-child{color:#76584d}
+.services-evaluation-chevron{margin-left:auto;font-size:1.15rem;transition:transform .18s}
+.services-evaluation-button[aria-expanded="true"] .services-evaluation-chevron{transform:rotate(180deg)}
+.services-evaluation-info{margin:.45rem 0 0;padding:.75rem .9rem;border-left:3px solid #9b786c;border-radius:0 8px 8px 0;background:#f5eeeb;color:#4f3f39;font-size:.82rem;line-height:1.5}
+.services-evaluation-info[hidden]{display:none!important}
 .services-selection{min-height:1.5rem;margin:0 0 .75rem;color:#4f3f39;font-size:.9rem}
 .services-continue{display:flex;justify-content:center;align-items:center;gap:.6rem;padding:.95rem 1rem;border-radius:12px;background:#6b4e43;color:white;font-weight:600;text-decoration:none;text-align:center}
 .services-continue[aria-disabled="true"]{background:#d8c2b9;color:#645852;cursor:not-allowed;pointer-events:none}
@@ -542,8 +544,9 @@ html[data-theme="dark"] .services-subgroup+.services-subgroup{border-top-color:#
 html[data-theme="dark"] .services-option{background:#e8e5e3;color:#302724}
 html[data-theme="dark"] .services-option[aria-pressed="true"]{background:#302724;color:#fff}
 html[data-theme="dark"] .services-unsure .services-option{background:#d8c2b9;color:#302724}
-html[data-theme="dark"] .services-evaluation-note{background:#65534d;border-color:#a99389;color:#fff}
-html[data-theme="dark"] .services-evaluation-note>span:first-child{color:#fff}
+html[data-theme="dark"] .services-evaluation-button{background:#65534d;border-color:#a99389;color:#fff}
+html[data-theme="dark"] .services-evaluation-button>span:first-child{color:#fff}
+html[data-theme="dark"] .services-evaluation-info{background:#65534d;color:#fff;border-left-color:#d8c2b9}
 html[data-theme="dark"] .services-close{color:#fff}
 html[data-theme="dark"] .services-continue{background:#302724}
 html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c2b9;color:#51413b}
@@ -889,7 +892,7 @@ html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c
 <section class="services-category"><button type="button" class="services-tab" data-category="facial" aria-expanded="false" aria-controls="panel-facial"><span class="services-tab-icon" aria-hidden="true">◌</span><span class="services-tab-text"><strong>Estética facial</strong><small>Harmonização e tratamentos faciais</small></span><span class="services-chevron" aria-hidden="true"></span></button><div class="services-panel" id="panel-facial" hidden><div class="services-subgroup"><h3>Harmonização facial</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Procedimentos estéticos">Procedimentos estéticos</button><button type="button" class="services-option" aria-pressed="false" data-service="Botox">Botox</button><button type="button" class="services-option" aria-pressed="false" data-service="Preenchimento labial">Preenchimento labial</button><button type="button" class="services-option" aria-pressed="false" data-service="Contorno de mandíbula">Contorno de mandíbula</button><button type="button" class="services-option" aria-pressed="false" data-service="Projeção de queixo">Projeção de queixo</button><button type="button" class="services-option" aria-pressed="false" data-service="Bioestimulador de colágeno">Bioestimulador de colágeno</button></div></div><div class="services-subgroup"><h3>Tecnologias e pele</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Ultrassom microfocado">Ultrassom microfocado</button><button type="button" class="services-option" aria-pressed="false" data-service="Microagulhamento">Microagulhamento</button></div></div></div></section>
     </div>
     <div class="services-unsure"><button type="button" class="services-option" aria-pressed="false" data-service="Ainda não sei">Ainda não sei qual tratamento preciso</button></div>
-    <div class="services-evaluation-note"><span aria-hidden="true">✦</span><span><strong>Todo cuidado começa pela avaliação.</strong><small>A indicação de cada procedimento depende de uma avaliação individual.</small></span></div>
+    <div class="services-evaluation"><button type="button" class="services-evaluation-button" aria-expanded="false" aria-controls="services-evaluation-info"><span aria-hidden="true">✦</span> Todos os tratamentos começam pela avaliação <span class="services-evaluation-chevron" aria-hidden="true">⌄</span></button><p class="services-evaluation-info" id="services-evaluation-info" hidden>A avaliação individual ajuda a Dra. Eleniza a entender suas necessidades e indicar o cuidado mais adequado. A indicação e a realização de cada procedimento dependem dessa avaliação.</p></div>
     <p id="services-selection" class="services-selection" aria-live="polite">Escolha uma opção para continuar.</p>
     <a class="services-continue" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Continuar no WhatsApp <span aria-hidden="true">↗</span></a>
     <a class="services-direct" href="https://wa.me/5588981347708?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Eleniza." target="_blank" rel="noopener noreferrer">Prefiro falar direto, sem escolher</a>
@@ -906,6 +909,8 @@ html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c
   var continueLink=modal.querySelector('.services-continue');
   var direct=modal.querySelector('.services-direct');
   var closeButton=modal.querySelector('.services-close');
+  var evaluationButton=modal.querySelector('.services-evaluation-button');
+  var evaluationInfo=modal.querySelector('.services-evaluation-info');
   var previousFocus=null;
   function open(){
     previousFocus=document.activeElement;
@@ -913,6 +918,8 @@ html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c
     tabs.forEach(function(tab){tab.classList.remove('is-active');tab.setAttribute('aria-expanded','false')});
     panels.forEach(function(panel){panel.hidden=true});
     selection.textContent='Selecione um serviço para continuar.';
+    evaluationButton.setAttribute('aria-expanded','false');
+    evaluationInfo.hidden=true;
     continueLink.setAttribute('aria-disabled','true');
     continueLink.setAttribute('tabindex','-1');
     continueLink.href='#';
@@ -946,6 +953,11 @@ html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c
         activateCategory(tab.dataset.category);
       }
     });
+  });
+  evaluationButton.addEventListener('click',function(){
+    var expanded=evaluationButton.getAttribute('aria-expanded')==='true';
+    evaluationButton.setAttribute('aria-expanded',expanded?'false':'true');
+    evaluationInfo.hidden=expanded;
   });
   opener.addEventListener('click',open);
   closeButton.addEventListener('click',close);
