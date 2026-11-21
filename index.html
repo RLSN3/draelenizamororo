@@ -580,24 +580,27 @@ html[data-theme="dark"] .services-close{color:#fff}
 .services-progress{display:flex;align-items:center;gap:.65rem;margin:1rem 0 .6rem}
 .services-progress-number{flex:none;padding:.28rem .52rem;border-radius:20px;background:#60483f;color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.055em}
 .services-progress-text{font-size:.82rem;font-weight:750;color:#60483f}
-.services-tab[aria-expanded="true"]{background:#60483f!important;border:2px solid #302421!important;color:#fff!important;box-shadow:0 4px 13px rgba(48,36,33,.2)!important;transform:translateY(-1px)}
+/* Cor de destaque única da marca: marrom #60483F */
+.services-tab[aria-expanded="true"]{background:#60483f!important;border:2px solid #60483f!important;color:#fff!important;box-shadow:0 4px 13px rgba(48,36,33,.18)!important;transform:translateY(-1px)}
 .services-tab[aria-expanded="true"] .services-tab-icon{background:#eadbd7!important;color:#60483f!important}
 .services-tab[aria-expanded="true"] .services-tab-text strong,.services-tab[aria-expanded="true"] .services-tab-text small{color:#fff!important}
 .services-tab[aria-expanded="true"] .services-category-count{background:#eadbd7!important;color:#493630!important}
 .services-tab[aria-expanded="true"] .services-chevron{border-color:#fff!important}
-.services-panel{background:#f4ebe7!important;border:1px solid #c9a99d!important;box-shadow:inset 3px 0 0 #8d6c60}
+.services-panel{background:#f4ebe7!important;border:1px solid #c9a99d!important;box-shadow:inset 3px 0 0 #60483f}
 .services-panel-title{color:#493630!important}
 .services-panel-title span{display:inline-flex;padding:.22rem .5rem;border-radius:20px;background:#eadbd7;color:#60483f!important}
 .services-option{background:#fff!important;border:1px solid #d8c2b9!important;color:#382b27!important}
-.services-option:hover{background:#f0e3de!important;border-color:#8d6c60!important}
-.services-option[aria-pressed="true"]{background:#60483f!important;color:#fff!important;border-color:#302421!important}
+.services-option:hover{background:#f0e3de!important;border-color:#60483f!important}
+.services-option[aria-pressed="true"]{background:#60483f!important;color:#fff!important;border-color:#60483f!important}
+.services-appointment{background:#60483f!important}
+.services-appointment:hover{background:#493630!important}
 html[data-theme="dark"] .services-progress-text{color:#fff}
-html[data-theme="dark"] .services-tab[aria-expanded="true"]{background:#302421!important;border-color:#eadbd7!important}
+html[data-theme="dark"] .services-tab[aria-expanded="true"]{background:#60483f!important;border-color:#eadbd7!important}
 html[data-theme="dark"] .services-panel{background:#5b4b45!important;border-color:#c0a79c!important}
 html[data-theme="dark"] .services-panel-title,html[data-theme="dark"] .services-panel-title span{color:#fff!important}
 html[data-theme="dark"] .services-panel-title span{background:#80675d}
 html[data-theme="dark"] .services-option{background:#eee7e3!important;color:#302421!important;border-color:#c5b5ad!important}
-html[data-theme="dark"] .services-option[aria-pressed="true"]{background:#302421!important;color:#fff!important}
+html[data-theme="dark"] .services-option[aria-pressed="true"]{background:#60483f!important;color:#fff!important;border-color:#eadbd7!important}
 @media(max-width:560px){.services-progress{margin:.8rem 0 .55rem}.services-progress-text{font-size:.78rem}}
 </style>
 </head>
