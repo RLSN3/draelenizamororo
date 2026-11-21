@@ -978,8 +978,11 @@ html[data-theme="dark"] .services-close{color:#fff}
       var message=service==='Ainda não sei'
         ? 'Olá! Gostaria de agendar uma avaliação com a Dra. Eleniza, mas ainda não sei qual serviço é o mais indicado para mim.'
         : 'Olá! Gostaria de agendar uma avaliação com a Dra. Eleniza. Tenho interesse em '+service+'.';
-      appointment.href='https://wa.me/5588981347708?text='+encodeURIComponent(message);
-      selection.textContent=service==='Ainda não sei'?'Vamos conversar para identificar o cuidado mais adequado para você.':'Você selecionou: '+service+'. O próximo passo é agendar sua avaliação.';
+      var whatsappUrl='https://wa.me/5588981347708?text='+encodeURIComponent(message);
+      selection.textContent='Abrindo o WhatsApp com sua mensagem...';
+      close();
+      var whatsappWindow=window.open(whatsappUrl,'_blank');
+      if(whatsappWindow){whatsappWindow.opener=null}else{window.location.href=whatsappUrl}
     });
   });
   appointment.addEventListener('click',function(){close()},true);
