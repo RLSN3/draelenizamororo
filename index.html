@@ -238,14 +238,14 @@ h2{font-weight:600;font-size:clamp(1.95rem,4vw,3.05rem);line-height:1.1;letter-s
 .srv li:hover .go .a{transform:translateX(.7rem)}
 .srv li:hover .go .w{transform:scale(1.08);background:#25d366;color:var(--ink);box-shadow:0 0 0 4px var(--mist)}
 
-/* LOCAL: taupe (primária) + blush (secundária) */
-.loc{position:relative;background:var(--taupe);color:var(--ink);overflow:hidden}
+/* LOCAL: fundo cinza da paleta, aplicado à seção inteira */
+.loc{position:relative;background:#999999;color:var(--ink);overflow:hidden}
 .loc::before{content:"";position:absolute;width:60vw;max-width:780px;aspect-ratio:1;right:-18vw;top:-30%;border-radius:50%;background:radial-gradient(circle,rgba(248,249,250,.16),rgba(248,249,250,0) 66%);pointer-events:none}
 .loc .grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
 .loc h2{color:var(--ink)}
 .addr{font-size:1.5rem;font-weight:600;line-height:1.35;margin-top:1.6rem;color:var(--ink)}
 .loc p.ref{margin-top:1rem;max-width:46ch;color:var(--ink)}
-.loc .card{background:#999999;color:#2e2220;padding:clamp(1.5rem,3vw,2.5rem);box-shadow:0 16px 35px -28px rgba(46,34,32,.35);border-radius:var(--r)}
+.loc .card{background:transparent;color:var(--ink);padding:0;box-shadow:none;border-radius:0}
 .card .logo{width:100%}
 .card .logo{--la:#302724;--lb:#302724}
 .card p{margin-top:1.4rem;padding-top:1.3rem;border-top:1px solid rgba(46,34,32,.35);color:var(--ink);font-size:1.02rem}
@@ -445,8 +445,9 @@ html[data-theme="dark"] .pz{background:rgba(115,115,115,.92);color:#fff;box-shad
 html[data-theme="dark"] .pz:hover{background:#777}
 html[data-theme="dark"] .dots{background:rgba(115,115,115,.9)}
 html[data-theme="dark"] .dots button[aria-current=true]::before{background:#fff}
+html[data-theme="dark"] .loc{background:#707070}
 html[data-theme="dark"] .loc .card{
-  background:#858585;color:#fff;border:0;box-shadow:0 16px 35px -28px rgba(0,0,0,.35)
+  background:transparent;color:#fff;border:0;box-shadow:none
 }
 html[data-theme="dark"] .loc .card .logo{--la:#302724;--lb:#fff}
 html[data-theme="dark"] .srv li{background:#858585;color:#fff;border-color:rgba(255,255,255,.22)}
