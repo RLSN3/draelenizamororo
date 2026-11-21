@@ -575,6 +575,30 @@ html[data-theme="dark"] .services-close{color:#fff}
  .services-evaluation-cta p{font-size:.78rem}
 }
 @media(prefers-reduced-motion:reduce){.services-option,.services-chevron,.services-appointment,.services-tab{transition:none}}
+
+/* Orientação visual de progresso e estados ativos */
+.services-progress{display:flex;align-items:center;gap:.65rem;margin:1rem 0 .6rem}
+.services-progress-number{flex:none;padding:.28rem .52rem;border-radius:20px;background:#60483f;color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.055em}
+.services-progress-text{font-size:.82rem;font-weight:750;color:#60483f}
+.services-tab[aria-expanded="true"]{background:#60483f!important;border:2px solid #302421!important;color:#fff!important;box-shadow:0 4px 13px rgba(48,36,33,.2)!important;transform:translateY(-1px)}
+.services-tab[aria-expanded="true"] .services-tab-icon{background:#eadbd7!important;color:#60483f!important}
+.services-tab[aria-expanded="true"] .services-tab-text strong,.services-tab[aria-expanded="true"] .services-tab-text small{color:#fff!important}
+.services-tab[aria-expanded="true"] .services-category-count{background:#eadbd7!important;color:#493630!important}
+.services-tab[aria-expanded="true"] .services-chevron{border-color:#fff!important}
+.services-panel{background:#f4ebe7!important;border:1px solid #c9a99d!important;box-shadow:inset 3px 0 0 #8d6c60}
+.services-panel-title{color:#493630!important}
+.services-panel-title span{display:inline-flex;padding:.22rem .5rem;border-radius:20px;background:#eadbd7;color:#60483f!important}
+.services-option{background:#fff!important;border:1px solid #d8c2b9!important;color:#382b27!important}
+.services-option:hover{background:#f0e3de!important;border-color:#8d6c60!important}
+.services-option[aria-pressed="true"]{background:#60483f!important;color:#fff!important;border-color:#302421!important}
+html[data-theme="dark"] .services-progress-text{color:#fff}
+html[data-theme="dark"] .services-tab[aria-expanded="true"]{background:#302421!important;border-color:#eadbd7!important}
+html[data-theme="dark"] .services-panel{background:#5b4b45!important;border-color:#c0a79c!important}
+html[data-theme="dark"] .services-panel-title,html[data-theme="dark"] .services-panel-title span{color:#fff!important}
+html[data-theme="dark"] .services-panel-title span{background:#80675d}
+html[data-theme="dark"] .services-option{background:#eee7e3!important;color:#302421!important;border-color:#c5b5ad!important}
+html[data-theme="dark"] .services-option[aria-pressed="true"]{background:#302421!important;color:#fff!important}
+@media(max-width:560px){.services-progress{margin:.8rem 0 .55rem}.services-progress-text{font-size:.78rem}}
 </style>
 </head>
 <body>
@@ -912,7 +936,7 @@ html[data-theme="dark"] .services-close{color:#fff}
       <p><strong>Tudo começa com uma avaliação.</strong> É nesse momento que a Dra. Eleniza identifica suas necessidades e indica o serviço mais adequado para você.</p>
       <a class="services-appointment" href="https://wa.me/5588981347708?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Eleniza." target="_blank" rel="noopener noreferrer">Agendar avaliação <span aria-hidden="true">↗</span></a>
     </div>
-    <p class="services-step-label">Escolha uma área de atendimento</p>
+    <div class="services-progress" aria-live="polite"><span class="services-progress-number">ETAPA 1 DE 2</span><span class="services-progress-text">Escolha uma área de atendimento</span></div>
     <div class="services-accordion" aria-label="Áreas de atendimento"><button type="button" class="services-tab" data-category="saude" aria-expanded="false" aria-controls="panel-saude"><span class="services-tab-icon" aria-hidden="true">✦</span><span class="services-tab-text"><strong>Saúde bucal</strong><small>Prevenção, consultas e tratamentos</small></span><span class="services-category-count">13 serviços</span><span class="services-chevron" aria-hidden="true"></span></button>
 <button type="button" class="services-tab" data-category="dental" aria-expanded="false" aria-controls="panel-dental"><span class="services-tab-icon" aria-hidden="true">✧</span><span class="services-tab-text"><strong>Estética dental</strong><small>Clareamento e harmonia do sorriso</small></span><span class="services-category-count">1 serviço</span><span class="services-chevron" aria-hidden="true"></span></button>
 <button type="button" class="services-tab" data-category="facial" aria-expanded="false" aria-controls="panel-facial"><span class="services-tab-icon" aria-hidden="true">◌</span><span class="services-tab-text"><strong>Estética facial</strong><small>Harmonização e cuidados com a pele</small></span><span class="services-category-count">8 serviços</span><span class="services-chevron" aria-hidden="true"></span></button></div>
@@ -942,8 +966,15 @@ html[data-theme="dark"] .services-close{color:#fff}
     tabs.forEach(function(tab){tab.setAttribute('aria-expanded','false')});
     panels.forEach(function(panel){panel.hidden=true});
   }
+  var progressNumber=modal.querySelector('.services-progress-number');
+  var progressText=modal.querySelector('.services-progress-text');
+  function resetProgress(){
+    progressNumber.textContent='ETAPA 1 DE 2';
+    progressText.textContent='Escolha uma área de atendimento';
+  }
   function open(){
     previousFocus=document.activeElement;
+    resetProgress();
     options.forEach(function(button){button.setAttribute('aria-pressed','false')});
     closeAllCategories();
     appointment.href='https://wa.me/5588981347708?text='+encodeURIComponent('Olá! Gostaria de agendar uma avaliação com a Dra. Eleniza.');
@@ -965,6 +996,8 @@ html[data-theme="dark"] .services-close{color:#fff}
         tab.setAttribute('aria-expanded','true');
         var panel=document.getElementById(tab.getAttribute('aria-controls'));
         panel.hidden=false;
+        progressNumber.textContent='ETAPA 2 DE 2';
+        progressText.textContent='Agora escolha o serviço em '+tab.querySelector('.services-tab-text strong').textContent;
       }
     });
   });
