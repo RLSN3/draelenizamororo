@@ -500,7 +500,23 @@ html[data-theme="dark"] .theme-toggle:hover{background:#777;border-color:#fff}
 .services-dialog .modal-lead{margin-top:.55rem;color:#4f3f39;font-size:.98rem}
 .services-close{position:absolute;right:1.15rem;top:1rem;width:2.5rem;height:2.5rem;border:0;background:transparent;color:#2e2220;font:600 1.75rem/1 inherit;cursor:pointer;border-radius:50%}
 .services-close:hover{background:#eadbd7}
-.services-options{display:grid;gap:1rem;margin:1.2rem 0;max-height:min(43dvh,370px);overflow-y:auto;overscroll-behavior:contain;padding-right:.3rem}.services-group h3{font-size:.88rem;line-height:1.4;margin:0 0 .45rem;color:#6b4e43}.services-choice-row{display:flex;flex-wrap:wrap;gap:.5rem}
+
+.services-options{display:grid;gap:.65rem;margin:1.15rem 0 .75rem;max-height:min(42dvh,390px);overflow-y:auto;overscroll-behavior:contain;padding-right:.3rem}
+.services-category{border:1px solid #dfd4cf;background:#fff;border-radius:14px;overflow:hidden}
+.services-category summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;list-style:none;padding:.8rem 1rem;font-weight:700;line-height:1.3}
+.services-category summary::-webkit-details-marker{display:none}
+.services-category summary:hover{background:#f3ebe7}
+.services-summary-label{display:block}
+.services-summary-label small{display:block;font-size:.81rem;font-weight:400;color:#6b4e43;margin-top:.25rem}
+.services-chevron{width:.65rem;height:.65rem;flex:none;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .2s ease}
+.services-category[open] .services-chevron{transform:rotate(225deg)}
+.services-category-content{border-top:1px solid #e5d9d4;padding:1rem}
+.services-subgroup+.services-subgroup{margin-top:1rem;padding-top:.85rem;border-top:1px solid #eee5e1}
+.services-subgroup h3{font-size:.86rem;line-height:1.4;margin:0 0 .5rem;color:#6b4e43;font-weight:700}
+.services-choice-row{display:flex;flex-wrap:wrap;gap:.5rem}
+.services-unsure{margin-bottom:.85rem}
+.services-unsure .services-option{width:100%;text-align:center;background:#eadbd7;border-color:#d8c2b9}
+.services-category summary:focus-visible{outline:3px solid #6b4e43;outline-offset:-3px}
 .services-option{border:1px solid #d6cfcc;background:#fff;color:#2e2220;padding:.65rem .95rem;border-radius:10px;font:600 .92rem/1.3 'SN Pro',system-ui,sans-serif;cursor:pointer;transition:background .2s,border-color .2s}
 .services-option:hover{border-color:#6b4e43;background:#eadbd7}
 .services-option[aria-pressed="true"]{background:#2e2220;color:#fff;border-color:#2e2220}
@@ -511,13 +527,18 @@ html[data-theme="dark"] .theme-toggle:hover{background:#777;border-color:#fff}
 .services-continue:focus-visible,.services-option:focus-visible,.services-close:focus-visible,.services-direct:focus-visible{outline:3px solid #6b4e43;outline-offset:3px}
 html[data-theme="dark"] .services-dialog{background:#858585;color:#fff}
 html[data-theme="dark"] .services-dialog .modal-lead,html[data-theme="dark"] .services-selection,html[data-theme="dark"] .services-direct{color:#fff}
-html[data-theme="dark"] .services-group h3{color:#fff}
+html[data-theme="dark"] .services-category{background:#747474;border-color:#aaa}
+html[data-theme="dark"] .services-category summary:hover{background:#6e6e6e}
+html[data-theme="dark"] .services-summary-label small{color:#f0f0f0}
+html[data-theme="dark"] .services-category-content,html[data-theme="dark"] .services-subgroup+.services-subgroup{border-color:#aaa}
+html[data-theme="dark"] .services-subgroup h3{color:#fff}
+html[data-theme="dark"] .services-unsure .services-option{background:#d8c2b9;color:#302724}
 html[data-theme="dark"] .services-option{background:#e8e5e3;color:#302724}
 html[data-theme="dark"] .services-option[aria-pressed="true"]{background:#302724;color:#fff}
 html[data-theme="dark"] .services-close{color:#fff}
 html[data-theme="dark"] .services-continue{background:#302724}
 html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c2b9;color:#51413b}
-@media(max-width:480px){.services-modal{padding:.65rem}.services-dialog{border-radius:17px}.services-options{gap:.48rem}.services-option{padding:.65rem .8rem;font-size:.89rem}}
+@media(max-width:480px){.services-modal{padding:.65rem}.services-dialog{border-radius:17px}.services-options{gap:.5rem}.services-category-content{padding:.8rem}.services-option{padding:.65rem .8rem;font-size:.89rem}}
 @media(prefers-reduced-motion:reduce){.services-option{transition:none}}
 </style>
 </head>
@@ -853,15 +874,15 @@ html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c
     <h2 id="services-modal-title">O que você procura?</h2>
     <p id="services-modal-description" class="modal-lead">Selecione o atendimento desejado e envie uma mensagem pronta para o WhatsApp.</p>
     <div class="services-options" role="group" aria-label="Selecione um tratamento">
-      <div class="services-group"><h3>Clínica geral</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Consulta odontológica">Consulta odontológica</button><button type="button" class="services-option" aria-pressed="false" data-service="Limpeza profissional">Limpeza profissional</button><button type="button" class="services-option" aria-pressed="false" data-service="Raspagem">Raspagem</button><button type="button" class="services-option" aria-pressed="false" data-service="Aplicação tópica de flúor">Aplicação tópica de flúor</button></div></div>
-      <div class="services-group"><h3>Tratamento de canal</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Tratamento de canal">Tratamento de canal</button></div></div>
-      <div class="services-group"><h3>Saúde gengival</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Tratamento de inflamações gengivais">Tratamento de inflamações gengivais</button><button type="button" class="services-option" aria-pressed="false" data-service="Gengivectomia">Gengivectomia</button><button type="button" class="services-option" aria-pressed="false" data-service="Gengivoplastia">Gengivoplastia</button><button type="button" class="services-option" aria-pressed="false" data-service="Frenectomia">Frenectomia</button></div></div>
-      <div class="services-group"><h3>Cirurgia oral</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Cirurgia oral">Cirurgia oral</button><button type="button" class="services-option" aria-pressed="false" data-service="Extração dentária">Extração dentária</button><button type="button" class="services-option" aria-pressed="false" data-service="Extração de siso">Extração de siso</button></div></div>
-      <div class="services-group"><h3>Estética dental</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Clareamento dental">Clareamento dental</button></div></div>
-      <div class="services-group"><h3>Laserterapia</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Laserterapia">Laserterapia</button></div></div>
-      <div class="services-group"><h3>Estética facial</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Procedimentos estéticos">Procedimentos estéticos</button><button type="button" class="services-option" aria-pressed="false" data-service="Botox">Botox</button><button type="button" class="services-option" aria-pressed="false" data-service="Preenchimento labial">Preenchimento labial</button><button type="button" class="services-option" aria-pressed="false" data-service="Contorno de mandíbula">Contorno de mandíbula</button><button type="button" class="services-option" aria-pressed="false" data-service="Projeção de queixo">Projeção de queixo</button><button type="button" class="services-option" aria-pressed="false" data-service="Bioestimulador de colágeno">Bioestimulador de colágeno</button><button type="button" class="services-option" aria-pressed="false" data-service="Ultrassom microfocado">Ultrassom microfocado</button><button type="button" class="services-option" aria-pressed="false" data-service="Microagulhamento">Microagulhamento</button></div></div>
-      <div class="services-group"><h3>Precisa de orientação?</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Ainda não sei">Ainda não sei qual tratamento preciso</button></div></div>
+      <details class="services-category" open><summary><span class="services-summary-label">Saúde bucal<small>Consultas, prevenção e tratamentos</small></span><span class="services-chevron" aria-hidden="true"></span></summary><div class="services-category-content"><div class="services-subgroup"><h3>Clínica geral</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Consulta odontológica">Consulta odontológica</button><button type="button" class="services-option" aria-pressed="false" data-service="Limpeza profissional">Limpeza profissional</button><button type="button" class="services-option" aria-pressed="false" data-service="Raspagem">Raspagem</button><button type="button" class="services-option" aria-pressed="false" data-service="Aplicação tópica de flúor">Aplicação tópica de flúor</button></div></div>
+<div class="services-subgroup"><h3>Tratamento de canal</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Tratamento de canal">Tratamento de canal</button></div></div>
+<div class="services-subgroup"><h3>Saúde gengival</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Tratamento de inflamações gengivais">Tratamento de inflamações gengivais</button><button type="button" class="services-option" aria-pressed="false" data-service="Gengivectomia">Gengivectomia</button><button type="button" class="services-option" aria-pressed="false" data-service="Gengivoplastia">Gengivoplastia</button><button type="button" class="services-option" aria-pressed="false" data-service="Frenectomia">Frenectomia</button></div></div>
+<div class="services-subgroup"><h3>Cirurgia oral</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Cirurgia oral">Cirurgia oral</button><button type="button" class="services-option" aria-pressed="false" data-service="Extração dentária">Extração dentária</button><button type="button" class="services-option" aria-pressed="false" data-service="Extração de siso">Extração de siso</button></div></div>
+<div class="services-subgroup"><h3>Laserterapia</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Laserterapia">Laserterapia</button></div></div></div></details>
+      <details class="services-category" ><summary><span class="services-summary-label">Estética dental<small>Clareamento e cuidados com o sorriso</small></span><span class="services-chevron" aria-hidden="true"></span></summary><div class="services-category-content"><div class="services-subgroup"><h3>Estética dental</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Clareamento dental">Clareamento dental</button></div></div></div></details>
+      <details class="services-category" ><summary><span class="services-summary-label">Estética facial<small>Harmonização e tratamentos faciais</small></span><span class="services-chevron" aria-hidden="true"></span></summary><div class="services-category-content"><div class="services-subgroup"><h3>Estética facial</h3><div class="services-choice-row"><button type="button" class="services-option" aria-pressed="false" data-service="Procedimentos estéticos">Procedimentos estéticos</button><button type="button" class="services-option" aria-pressed="false" data-service="Botox">Botox</button><button type="button" class="services-option" aria-pressed="false" data-service="Preenchimento labial">Preenchimento labial</button><button type="button" class="services-option" aria-pressed="false" data-service="Contorno de mandíbula">Contorno de mandíbula</button><button type="button" class="services-option" aria-pressed="false" data-service="Projeção de queixo">Projeção de queixo</button><button type="button" class="services-option" aria-pressed="false" data-service="Bioestimulador de colágeno">Bioestimulador de colágeno</button><button type="button" class="services-option" aria-pressed="false" data-service="Ultrassom microfocado">Ultrassom microfocado</button><button type="button" class="services-option" aria-pressed="false" data-service="Microagulhamento">Microagulhamento</button></div></div></div></details>
     </div>
+    <div class="services-unsure"><button type="button" class="services-option" aria-pressed="false" data-service="Ainda não sei">Não sei qual tratamento preciso</button></div>
     <p id="services-selection" class="services-selection" aria-live="polite">Escolha uma opção para continuar.</p>
     <a class="services-continue" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Continuar no WhatsApp <span aria-hidden="true">↗</span></a>
     <a class="services-direct" href="https://wa.me/5588981347708?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Eleniza." target="_blank" rel="noopener noreferrer">Prefiro falar direto, sem escolher</a>
@@ -882,6 +903,7 @@ html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c
   function open(){
     previousFocus=document.activeElement;
     options.forEach(function(b){b.setAttribute('aria-pressed','false')});
+    categories.forEach(function(section,i){section.open=i===0});
     selection.textContent='Escolha uma opção para continuar.';
     continueLink.setAttribute('aria-disabled','true');
     continueLink.setAttribute('tabindex','-1');
@@ -895,6 +917,12 @@ html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c
     document.body.style.overflow='';
     if(previousFocus&&typeof previousFocus.focus==='function')previousFocus.focus({preventScroll:true});
   }
+  var categories=[].slice.call(modal.querySelectorAll('.services-category'));
+  categories.forEach(function(section){
+    section.addEventListener('toggle',function(){
+      if(section.open)categories.forEach(function(other){if(other!==section)other.open=false});
+    });
+  });
   opener.addEventListener('click',open);
   closeButton.addEventListener('click',close);
   modal.addEventListener('click',function(e){if(e.target===modal)close()});
