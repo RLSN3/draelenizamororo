@@ -492,7 +492,7 @@ html[data-theme="dark"] .theme-toggle:hover{background:#777;border-color:#fff}
 }
 
 /* Escolha do tratamento antes do WhatsApp */
-.open-services-modal{font:600 inherit;font-weight:600;font-size:inherit;cursor:pointer;border:0;text-align:left}
+.open-services-modal{font-family:'SN Pro',system-ui,sans-serif;font-weight:600;font-size:inherit;cursor:pointer;border:0;text-align:left}
 .services-modal[hidden]{display:none!important}
 .services-modal{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:1rem;background:rgba(25,23,22,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .services-dialog{position:relative;width:min(570px,100%);max-height:min(92dvh,780px);overflow-y:auto;background:#f8f9fa;color:#2e2220;border-radius:20px;padding:clamp(1.25rem,3.5vw,2rem);box-shadow:0 25px 75px rgba(0,0,0,.3)}
@@ -863,7 +863,7 @@ html[data-theme="dark"] .services-continue[aria-disabled="true"]{background:#d8c
       <button type="button" class="services-option" aria-pressed="false" data-service="Ainda não sei">Ainda não sei</button>
     </div>
     <p id="services-selection" class="services-selection" aria-live="polite">Escolha uma opção para continuar.</p>
-    <a class="services-continue" href="#" aria-disabled="true" tabindex="-1">Continuar no WhatsApp <span aria-hidden="true">↗</span></a>
+    <a class="services-continue" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Continuar no WhatsApp <span aria-hidden="true">↗</span></a>
     <a class="services-direct" href="https://wa.me/5588981347708?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Eleniza." target="_blank" rel="noopener noreferrer">Prefiro falar direto, sem escolher</a>
   </div>
 </div>
