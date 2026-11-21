@@ -491,64 +491,90 @@ html[data-theme="dark"] .theme-toggle:hover{background:#777;border-color:#fff}
   .theme-toggle{transition:none}
 }
 
-/* Modal de agendamento: layout compacto, serviços em grade e CTA prioritário */
+/* Agendamento Dra. Eleniza | paleta rosé, nude e marrom da identidade */
 .open-services-modal{font-family:'SN Pro',system-ui,sans-serif;font-weight:600;font-size:inherit;cursor:pointer;border:0;text-align:left}
 .services-modal[hidden]{display:none!important}
-.services-modal{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:1rem;background:rgba(25,23,22,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.services-dialog{position:relative;width:min(650px,100%);max-height:92dvh;overflow-y:auto;overscroll-behavior:contain;background:#f8f9fa;color:#2e2220;border-radius:20px;padding:clamp(1.2rem,3.5vw,1.8rem);box-shadow:0 25px 75px rgba(0,0,0,.3)}
+.services-modal{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:1rem;background:rgba(35,27,25,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.services-dialog{position:relative;box-sizing:border-box;width:min(660px,100%);max-height:92dvh;overflow-y:auto;overscroll-behavior:contain;background:#fbf8f6;color:#302421;border:1px solid #e6d8d2;border-radius:20px;padding:clamp(1.1rem,3.5vw,1.7rem);box-shadow:0 25px 75px rgba(0,0,0,.28)}
 .services-dialog section{padding:0;overflow:visible}
-.services-dialog h2{font-size:clamp(1.5rem,3.4vw,1.85rem);line-height:1.2;padding-right:2.5rem;margin:0}
-.services-dialog .modal-lead{margin:.45rem 0 0;color:#62514b;font-size:.92rem;line-height:1.5}
-.services-close{position:absolute;right:1.05rem;top:.9rem;width:2.5rem;height:2.5rem;border:0;background:transparent;color:#2e2220;font:600 1.75rem/1 inherit;cursor:pointer;border-radius:50%;z-index:2}
+.services-dialog h2{font-size:clamp(1.45rem,3.4vw,1.85rem);line-height:1.2;padding-right:2.5rem;margin:0;color:#302421}
+.services-dialog .modal-lead{margin:.4rem 0 0;color:#715a51;font-size:.9rem;line-height:1.45}
+.services-close{position:absolute;right:.9rem;top:.75rem;width:2.5rem;height:2.5rem;border:0;background:transparent;color:#302421;font:600 1.75rem/1 inherit;cursor:pointer;border-radius:50%;z-index:2}
 .services-close:hover{background:#eadbd7}
-.services-evaluation-cta{position:sticky;top:-1px;z-index:1;margin:1rem 0 1.1rem;padding:.85rem;background:#f0e3de;border:1px solid #ddc8bf;border-radius:13px;box-shadow:0 4px 12px rgba(46,34,32,.05)}
-.services-evaluation-cta p{margin:0 0 .7rem;color:#4b3731;font-size:.85rem;line-height:1.5}
-.services-evaluation-cta p strong{font-weight:700}
-.services-appointment{display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;min-height:44px;padding:.7rem 1rem;border-radius:9px;background:#302421;color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;transition:background .2s,transform .2s}
+.services-evaluation-cta{position:sticky;top:-1px;z-index:1;margin:.9rem 0 1.05rem;padding:.85rem;background:#eadbd7;border:1px solid #d7bdb3;border-radius:13px;box-shadow:0 4px 12px rgba(48,36,33,.06)}
+.services-evaluation-cta p{margin:0 0 .7rem;color:#493630;font-size:.86rem;line-height:1.48}
+.services-evaluation-cta p strong{display:block;margin-bottom:.12rem;font-weight:750;font-size:.94rem}
+.services-appointment{display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;min-height:46px;padding:.7rem 1rem;border-radius:9px;background:#302421;color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;transition:background .2s,transform .2s}
 .services-appointment:hover{background:#60483f;transform:translateY(-1px)}
-.services-step-label{font-size:.78rem;font-weight:700;letter-spacing:.025em;color:#6b4e43;margin:1.05rem 0 .55rem}
-.services-accordion{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem}
-.services-tab{box-sizing:border-box;display:flex!important;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.35rem;width:100%;height:auto!important;min-height:104px!important;max-height:none!important;flex:none!important;align-self:stretch;padding:.8rem!important;border:1px solid #e0d4cf!important;border-radius:12px;background:#fff;color:#2e2220;text-align:left;cursor:pointer;font-family:'SN Pro',system-ui,sans-serif}
-.services-tab:hover,.services-tab[aria-expanded="true"]{background:#f4ebe7;border-color:#b99d91!important}
-.services-tab-icon{display:grid;place-items:center;flex:none;width:29px;height:29px;border-radius:8px;background:#eadbd7;color:#6b4e43;font-size:1rem}
+.services-step-label{font-size:.78rem;font-weight:750;letter-spacing:.025em;color:#725448;margin:1rem 0 .55rem}
+.services-accordion{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
+.services-tab{box-sizing:border-box;display:flex!important;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.42rem;width:100%;height:auto!important;min-height:112px!important;max-height:none!important;flex:none!important;align-self:stretch;padding:.85rem!important;border:1px solid #dfc9c1!important;border-radius:13px;background:#f5eeeb;color:#302421;text-align:left;cursor:pointer;font-family:'SN Pro',system-ui,sans-serif;transition:background .2s,border-color .2s,box-shadow .2s}
+.services-tab:hover,.services-tab[aria-expanded="true"]{background:#eadbd7;border-color:#9b786c!important;box-shadow:0 3px 10px rgba(90,65,56,.08)}
+.services-tab-icon{display:grid;place-items:center;flex:none;width:31px;height:31px;border-radius:9px;background:#d8c2b9;color:#60483f;font-size:1rem}
 .services-tab-text{display:grid;gap:.12rem;flex:1;min-width:0}
-.services-tab-text strong{font-size:.86rem;line-height:1.25}
-.services-tab-text small{font-size:.7rem;font-weight:400;color:#6b4e43;line-height:1.3}
-.services-category-count{font-size:.7rem;color:#6b4e43;white-space:nowrap}
-.services-chevron{width:.5rem;height:.5rem;flex:none;margin-top:.2rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .18s ease}
+.services-tab-text strong{font-size:.88rem;line-height:1.25;color:#302421}
+.services-tab-text small{font-size:.72rem;font-weight:400;color:#71564b;line-height:1.35}
+.services-category-count{font-size:.7rem;font-weight:650;color:#60483f;background:#e8d8d2;border-radius:20px;padding:.22rem .5rem;white-space:nowrap}
+.services-chevron{width:.5rem;height:.5rem;flex:none;margin:.12rem 0 0 .12rem;border-right:2px solid #60483f;border-bottom:2px solid #60483f;transform:rotate(45deg);transition:transform .18s ease}
 .services-tab[aria-expanded="true"] .services-chevron{transform:rotate(225deg)}
 .services-panels{margin-top:.7rem}
-.services-panel{padding:.85rem;border:1px solid #e5d9d3;border-radius:12px;background:#fff}
+.services-panel{padding:.85rem;border:1px solid #dfc9c1;border-radius:13px;background:#fffdfc}
 .services-panel[hidden]{display:none!important}
-.services-panel-title{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin:0 0 .7rem;color:#4b3731;font-size:.88rem;font-weight:700}
+.services-panel-title{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin:0 0 .7rem;color:#493630;font-size:.9rem;font-weight:750}
 .services-panel-title span{font-size:.74rem;font-weight:400;color:#80675d}
-.services-options-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem}
-.services-option{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:.6rem;min-height:42px;width:100%;padding:.55rem .7rem;border:1px solid #ded5d1;border-radius:9px;background:#fff;color:#2e2220;font:600 .82rem/1.35 'SN Pro',system-ui,sans-serif;cursor:pointer;text-align:left;transition:background .2s,border-color .2s}
-.services-option:hover{border-color:#8d6c60;background:#f5ebe7}
-.services-option[aria-pressed="true"]{background:#2e2220;color:#fff;border-color:#2e2220}
+.services-options-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+.services-option{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:.6rem;min-height:44px;width:100%;padding:.6rem .75rem;border:1px solid #e1d4ce;border-radius:9px;background:#f9f5f3;color:#382b27;font:600 .83rem/1.35 'SN Pro',system-ui,sans-serif;cursor:pointer;text-align:left;transition:background .2s,border-color .2s,color .2s}
+.services-option:hover{border-color:#a9877b;background:#f0e3de}
+.services-option[aria-pressed="true"]{background:#60483f;color:#fff;border-color:#60483f}
 .services-option-check{opacity:0;flex:none}
 .services-option[aria-pressed="true"] .services-option-check{opacity:1}
-.services-selection{min-height:1.2rem;margin:.7rem 0 .55rem;color:#4f3f39;font-size:.82rem}
-.services-unsure{justify-content:center;text-align:center;background:#f3e9e5;border-color:#dfc9c0}
-.services-direct{display:block;margin:.85rem auto 0;text-align:center;font-size:.86rem;text-underline-offset:3px;color:#4f3f39}
-.services-appointment:focus-visible,.services-option:focus-visible,.services-tab:focus-visible,.services-close:focus-visible,.services-direct:focus-visible{outline:3px solid #6b4e43;outline-offset:3px}
-html[data-theme="dark"] .services-dialog{background:#858585;color:#fff}
-html[data-theme="dark"] .services-dialog .modal-lead,html[data-theme="dark"] .services-selection,html[data-theme="dark"] .services-direct,html[data-theme="dark"] .services-step-label{color:#fff}
-html[data-theme="dark"] .services-evaluation-cta{background:#65534d;border-color:#a99389}
+.services-selection{min-height:1.2rem;margin:.75rem 0 .55rem;color:#60483f;font-size:.83rem}
+.services-unsure{justify-content:center;text-align:center;background:#eadbd7;border-color:#d7bdb3;color:#493630}
+.services-unsure:hover{background:#dfc9c1}
+.services-direct{display:block;margin:.85rem auto 0;text-align:center;font-size:.86rem;text-underline-offset:3px;color:#60483f}
+.services-appointment:focus-visible,.services-option:focus-visible,.services-tab:focus-visible,.services-close:focus-visible,.services-direct:focus-visible{outline:3px solid #8d6c60;outline-offset:3px}
+html[data-theme="dark"] .services-dialog{background:#74645e;color:#fff;border-color:#98847c}
+html[data-theme="dark"] .services-dialog h2,html[data-theme="dark"] .services-dialog .modal-lead,html[data-theme="dark"] .services-selection,html[data-theme="dark"] .services-direct,html[data-theme="dark"] .services-step-label{color:#fff}
+html[data-theme="dark"] .services-evaluation-cta{background:#5f4c45;border-color:#a99389}
 html[data-theme="dark"] .services-evaluation-cta p{color:#fff}
-html[data-theme="dark"] .services-appointment{background:#302724;color:#fff}
-html[data-theme="dark"] .services-tab{background:#747474;color:#fff;border-color:#aaa!important}
-html[data-theme="dark"] .services-tab:hover,html[data-theme="dark"] .services-tab[aria-expanded="true"]{background:#655b58}
-html[data-theme="dark"] .services-tab-text small,html[data-theme="dark"] .services-category-count{color:#fff}
-html[data-theme="dark"] .services-tab-icon{background:#5d514d;color:#fff}
-html[data-theme="dark"] .services-panel{background:#747474;border-color:#aaa}
+html[data-theme="dark"] .services-appointment{background:#302421;color:#fff}
+html[data-theme="dark"] .services-tab{background:#62534d;color:#fff;border-color:#a99389!important}
+html[data-theme="dark"] .services-tab:hover,html[data-theme="dark"] .services-tab[aria-expanded="true"]{background:#51423d}
+html[data-theme="dark"] .services-tab-text strong,html[data-theme="dark"] .services-tab-text small,html[data-theme="dark"] .services-category-count{color:#fff}
+html[data-theme="dark"] .services-tab-icon{background:#8d746a;color:#fff}
+html[data-theme="dark"] .services-category-count{background:#80675d}
+html[data-theme="dark"] .services-chevron{border-color:#fff}
+html[data-theme="dark"] .services-panel{background:#62534d;border-color:#a99389}
 html[data-theme="dark"] .services-panel-title,html[data-theme="dark"] .services-panel-title span{color:#fff}
-html[data-theme="dark"] .services-option{background:#e8e5e3;color:#302724}
-html[data-theme="dark"] .services-option[aria-pressed="true"]{background:#302724;color:#fff}
-html[data-theme="dark"] .services-unsure{background:#d8c2b9;color:#302724}
+html[data-theme="dark"] .services-option{background:#eee7e3;color:#302421;border-color:#c5b5ad}
+html[data-theme="dark"] .services-option[aria-pressed="true"]{background:#302421;color:#fff;border-color:#302421}
+html[data-theme="dark"] .services-unsure{background:#d8c2b9;color:#302421}
 html[data-theme="dark"] .services-close{color:#fff}
-@media(max-width:560px){.services-modal{padding:.4rem}.services-dialog{width:100%;max-height:95dvh;border-radius:15px;padding:1rem}.services-accordion{grid-template-columns:1fr;gap:.45rem}.services-tab{min-height:64px!important;display:grid!important;grid-template-columns:30px 1fr auto 12px;align-items:center;gap:.6rem;padding:.6rem .7rem!important}.services-tab-icon{grid-row:1}.services-tab-text{grid-column:2;grid-row:1}.services-category-count{grid-column:3;grid-row:1}.services-chevron{grid-column:4;grid-row:1}.services-options-grid{grid-template-columns:1fr}.services-evaluation-cta{padding:.75rem}}
-@media(prefers-reduced-motion:reduce){.services-option,.services-chevron,.services-appointment{transition:none}}
+@media(max-width:560px){
+ .services-modal{padding:.35rem;align-items:center}
+ .services-dialog{width:100%;max-height:96dvh;border-radius:15px;padding:.95rem}
+ .services-dialog h2{font-size:1.42rem}
+ .services-dialog .modal-lead{font-size:.83rem}
+ .services-evaluation-cta{margin:.75rem 0 .85rem;padding:.75rem}
+ .services-evaluation-cta p{font-size:.82rem}
+ .services-accordion{grid-template-columns:1fr;gap:.45rem}
+ .services-tab{min-height:66px!important;display:grid!important;grid-template-columns:34px minmax(0,1fr) auto 12px;align-items:center;gap:.55rem;padding:.65rem .7rem!important}
+ .services-tab-icon{grid-column:1;grid-row:1}
+ .services-tab-text{grid-column:2;grid-row:1}
+ .services-category-count{grid-column:3;grid-row:1;font-size:.67rem}
+ .services-chevron{grid-column:4;grid-row:1}
+ .services-options-grid{grid-template-columns:1fr;gap:.4rem}
+ .services-option{min-height:46px;font-size:.84rem}
+}
+@media(max-width:360px){
+ .services-dialog{padding:.8rem}
+ .services-tab{grid-template-columns:30px minmax(0,1fr) auto 10px;gap:.4rem;padding:.6rem!important}
+ .services-tab-text strong{font-size:.82rem}
+ .services-tab-text small{font-size:.68rem}
+ .services-category-count{font-size:.62rem;padding:.18rem .35rem}
+ .services-evaluation-cta p{font-size:.78rem}
+}
+@media(prefers-reduced-motion:reduce){.services-option,.services-chevron,.services-appointment,.services-tab{transition:none}}
 </style>
 </head>
 <body>
@@ -881,7 +907,7 @@ html[data-theme="dark"] .services-close{color:#fff}
   <div class="services-dialog" role="dialog" aria-modal="true" aria-labelledby="services-modal-title" aria-describedby="services-modal-description">
     <button class="services-close" type="button" aria-label="Fechar janela de escolha">×</button>
     <h2 id="services-modal-title">Como podemos cuidar de você?</h2>
-    <p id="services-modal-description" class="modal-lead">Encontre o atendimento que procura e fale diretamente com a clínica.</p>
+    <p id="services-modal-description" class="modal-lead">Conheça os serviços disponíveis e escolha o que deseja consultar.</p>
     <div class="services-evaluation-cta">
       <p><strong>Tudo começa com uma avaliação.</strong> É nesse momento que a Dra. Eleniza identifica suas necessidades e indica o serviço mais adequado para você.</p>
       <a class="services-appointment" href="https://wa.me/5588981347708?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Eleniza." target="_blank" rel="noopener noreferrer">Agendar avaliação <span aria-hidden="true">↗</span></a>
